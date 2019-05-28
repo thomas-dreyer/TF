@@ -1,4 +1,6 @@
-﻿SET IDENTITY_INSERT [dbo].[Currencies] ON
+﻿USE [TFAPI.Providers.APIDbContext];
+
+SET IDENTITY_INSERT [dbo].[Currencies] ON
 INSERT INTO [dbo].[Currencies] ([Id], [Name], [Surcharge]) VALUES (1, N'ZAR', 0)
 INSERT INTO [dbo].[Currencies] ([Id], [Name], [Surcharge]) VALUES (2, N'USD', 7.5)
 INSERT INTO [dbo].[Currencies] ([Id], [Name], [Surcharge]) VALUES (3, N'GBP', 5)
