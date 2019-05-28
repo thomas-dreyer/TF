@@ -1,0 +1,50 @@
+﻿@section Scripts{
+    @Scripts.Render("~/bundles/knockout")
+    @Scripts.Render("~/bundles/app")
+    @Scripts.Render("~/bundles/currencyAPI")
+}
+
+<div class="container">
+    <div class="row">
+        <div class="col-lg-8 col-lg-offset-2 text-center">
+            <h2>Currencies</h2>
+            <hr class="primary">
+            <div id="_currency">
+
+            </div>
+            <button id="getCurrency">Get Currencies</button>
+        </div>
+        <div class="col-lg-4 col-lg-2 text-center">
+            <i class="panel-info">Pick a currency to purchase</i>
+            <p></p>
+        </div>
+    </div>
+</div>
+
+<!-- Modal -->
+<div id="showExhangeOrder" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title" id="LocalCurrencyName"></h4>
+            </div>
+            <div class="modal-body">
+                <div id="CurrencyDetails"></div>
+                <input id="buyRate" type="number" value="1" />
+                <div id="buyCurrency">
+
+                </div>
+                <button id="placeOrder">Order</button>
+                <div id="orderResult"></div>
+            </div>
+
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+
+    </div>
+</div>
